@@ -22,7 +22,7 @@ function init(){
   mouseYpercentage = Math.round(event.pageY / windowHeight * 100);
 
   $('.txt-mask').css('background', 'radial-gradient(circle at ' + mouseXpercentage + '% ' + mouseYpercentage
-  + '%, #34e89e, #0f443a)');
+  + '%, #eee, #2c3e50)');
   $('.txt-mask').css('background-clip', 'text');
   $('.txt-mask').css('-webkit-background-clip', 'text');
   $('.txt-mask').css('-moz-background-clip', 'text');
