@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/b1cba542fa.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/simpleLightbox.min.css">
+  <link rel="stylesheet" href="/style.css">
+
+  <title>Nicolò Azzolin | Portfolio</title>
+</head>
+<body>
+  <div class="nav-bar">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white pt-2 fixed-top">
+<a class="navbar-brand ml-md-5" href="/index.html"><img width="auto" height="50px" src="img/N_black.png"/></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<i class="fa fa-bars"></i>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ml-auto mr-md-5 text-center pt-4 pt-sm-0">
+  <li class="nav-item pt-2 pt-sm-0 pl-3">
+    <a class="nav-link" href="/index.html">PROJECTS</a>
+  </li>
+  <li class="nav-item pt-2 pt-sm-0 pl-3">
+    <a class="nav-link" href="/about.html">ABOUT ME</a>
+  </li>
+  <li class="nav-item pt-2 pt-sm-0 pl-3">
+    <a class="nav-link" href="/contact.html">CONTACT</a>
+  </li>
+</ul>
+</div>
+</nav>
+</div>
+
+<main id="swup" class="transition-fade">
+  <div class="container about">
+    <div class="row about-wrap">
+      <div class="profile-pic col-md-6 align-self-center mb-5 mb-sm-0">
+        <img class="img-fluid" src="img/profile_bw.jpg" width="360" height="540" alt="">
+      </div>
+      <div class="col-md-6 px-4 px-sm-0 align-self-center">
+        <div class="resume">
+          <h1>Nicolò Azzolin</h1>
+          <p>Here’s some facts about me:</p>
+            <ul>
+              <li><span>I’m pursuing a <strong>Master’s degree in Digital and Interaction Design</strong> at Politecnico di Milano, but I’m currently participating in a <strong>Double Degree program at Tongji University</strong> (Shanghai).</span></li>
+              <li><span>I have a <strong>Bachelor’s degree in Communication Design</strong>, obtained in Politecnico di Milano with a full score of 110/110.</span></li>
+              <li><span>I’m passionate about <strong>digital prototyping and coding</strong> for Design.</span></li>
+              <li><span>When I’m able to, I like to help others through my knowledge.</span></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <a href="" class="cv-button d-block"><i class="far fa-file-alt"></i> Download my CV</a>
+      </div>
+    </div>
+  </div>
+  <footer>
+
+  </footer>
+</main>
+
+<script src="/simpleLightbox.min.js" type="text/javascript"></script>
+<script src="/script.js" type="text/javascript"></script>
+<script src="/LightboxScript.js" type="text/javascript"></script>
+<script src="/WordsWorks/wwScript.js" type="text/javascript"></script>
+<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+<script>
+      const options = {
+    linkSelector:
+      'a[href^="' +
+      window.location.origin +
+      '"]:not([data-no-swup]), a[href^="/"]:not([data-no-swup]), a[href^="#"][data-no-swup]'
+  };
+
+  const swup = new Swup(options);
+  init();
+  swup.on('contentReplaced', init);
+</script>
+</body>
+</html>
