@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600");
 
 body{
   font-family:'Titillium Web', sans-serif;
@@ -37,24 +37,39 @@ body{
   margin-top:300px;
 }
 
+.landing .main-title svg{
+  width:100px;
+  height:100px;
+  position:absolute;
+  left: 50%;
+  margin-left: -50px;
+  top: 0%;
+  margin-top: 40px;
+  animation: animLogo 1.5s 0s ease-out forwards;
+}
+
 .landing .col-12 h1{
+  opacity:0;
   max-width:600px;
   height:400px;
   margin:auto auto;
   font-size:64pt;
   font-weight: 300;
   color:transparent;
+  animation: revealTitle 500ms 1.5s ease-out forwards;
 }
 
 .landing .col-12 span{
   text-decoration: underline;
-  text-decoration-color: #34e89e;
+  text-decoration-color: #111;
 }
 
 .landing .col-12 p{
+  opacity:0;
   margin-top:-290px;
   font-size:18pt;
   margin-bottom:160px;
+  animation: revealTitle 500ms 1.7s ease-out forwards;
 }
 
 @media (max-width:960px){
@@ -80,12 +95,14 @@ body{
   position: relative;
   border: 1px solid #bbb;
   top: 0;
+  opacity:0;
+  animation: revealTitle 500ms 1.9s ease-out forwards;
 }
 
 .txt-mask{
-  background: radial-gradient(ellipse at top, #34e89e, transparent),
-              radial-gradient(ellipse at bottom, #0f3443, transparent);
-background: radial-gradient(circle at top right, #34e89e, #0f3443);
+  background: radial-gradient(ellipse at top, #bdc3c7, transparent),
+              radial-gradient(ellipse at bottom, #2c3e50, transparent);
+background: radial-gradient(circle at top right, #bdc3c7, #2c3e50);
 background-position: 0 50%;
 -webkit-background-clip: text;
 -moz-background-clip: text;
@@ -223,7 +240,7 @@ background-clip: text;
 }
 
 .resume ul li{
-  color: #34e89e;
+  color: #111;
   margin:20px 0;
   font-size:14pt;
 }
@@ -237,8 +254,6 @@ background-clip: text;
 
 .resume h1{
   font-weight:600;
-  text-decoration: underline;
-  text-decoration-color: #34e89e;
   margin-bottom:25px;
 }
 
@@ -246,28 +261,9 @@ background-clip: text;
   font-size:14pt;
 }
 
-.cv-button{
+.cv-btn{
   margin:25px auto;
   width:180px;
-  background-color:#34e89e;
-  border:none;
-  padding:8px 15px;
-  border-radius: 6px;
-  color:#fff;
-  box-shadow: 0px 1px 3px #bcebe4;
-  transition:300ms ease-out;
-}
-
-.cv-button:hover{
-  box-shadow: 0px 6px 8px #bcebe4;
-  transition:300ms ease-out;
-  color:#fff;
-  text-decoration:none;
-}
-
-.cv-button:active{
-  box-shadow: 0px 3px 8px #bcebe4;
-  transition:300ms ease-out;
 }
 
 /*CONTACT*/
@@ -293,12 +289,12 @@ background-clip: text;
 
 .contact-wrap a{
   text-decoration: underline;
-  text-decoration-color:#34e89e;
+  text-decoration-color:#111;
   color:#111;
   transition:150ms ease-out;
 }
 .contact-wrap a:hover{
-  color:#34e89e;
+  color:#888;
   transition:150ms ease-out;
 }
 
@@ -341,6 +337,43 @@ background-clip: text;
 
 /*PROJECT PAGE*/
 
+.btn{
+  background-color:#111;
+  border:none;
+  padding:8px 15px;
+  border-radius: 6px;
+  color:#fff !important;
+  box-shadow: 0px 1px 3px rgba(136, 136, 136, 0.3);
+  text-decoration:none !important;
+  transition:200ms ease-out;
+}
+
+.btn:hover{
+  background-color:#222;
+  box-shadow: 0px 5px 8px rgba(136, 136, 136, 0.3);
+  transition:200ms ease-out;
+  color:#fff;
+  text-decoration:none;
+}
+
+.btn:active{
+  background-color:#888;
+  box-shadow: 0px 3px 8px rgba(136, 136, 136, 0.3);
+}
+
+.proj-main a{
+  color:black;
+  text-decoration: underline;
+  text-decoration-color: #111;
+  transition: 150ms ease-out;
+}
+.proj-main a:hover{
+  color:#888;
+  text-decoration: underline;
+  text-decoration-color: #111;
+  transition: 150ms ease-out;
+}
+
 .proj-cover .col-12{
     padding:0;
 }
@@ -369,6 +402,7 @@ background-clip: text;
   font-size:21pt;
   margin: 5px 30px;
   transition:250ms ease-out;
+  text-decoration:none !important;
 }
 
 .quick-nav .row:hover >*:hover{
@@ -448,28 +482,6 @@ background-clip: text;
   max-width:960px;
 }
 
-.res-gate .res-gate-button{
-  background-color:#48ceba;
-  border:none;
-  padding:8px 15px;
-  border-radius: 6px;
-  color:#fff;
-  box-shadow: 0px 1px 3px #bcebe4;
-  transition:300ms ease-out;
-}
-
-.res-gate .res-gate-button:hover{
-  box-shadow: 0px 6px 8px #bcebe4;
-  transition:300ms ease-out;
-  color:#fff;
-  text-decoration:none;
-}
-
-.res-gate .res-gate-button:active{
-  box-shadow: 0px 3px 8px #bcebe4;
-  transition:300ms ease-out;
-}
-
 .res-gate .fa-file-alt{
   color:#fff;
   padding-right:3px;
@@ -541,15 +553,15 @@ background-clip: text;
 .idrive{
   max-width:300px;
   padding:25px 40px;
-  border: 1.5px dashed #6bb2fe;
+  border: 1.5px dashed #888;
   transition:300ms ease-out;
 }
 
 .idrive:hover{
   max-width:300px;
   padding:25px 40px;
-  border: 1.5px solid #6bb2fe;
-  background-color: #bfdbf9;
+  border: 1.5px solid #888;
+  background-color: rgba(10, 10, 10,0.1);
   transition:300ms ease-out;
 }
 
@@ -780,4 +792,38 @@ html.is-animating .transition-fade {
 .slbCaption{
   color:#fff !important;
   padding-bottom:1.5em !important;
+}
+
+/* KEYFRAMES */
+
+@keyframes revealTitle{
+  0%{
+    transform:translateY(30px);
+    opacity:0;
+  }
+  100%{
+    transform:translateY(0px);
+    opacity:1;
+  }
+}
+
+@keyframes animLogo{
+  0%{
+    transform:rotate(0deg) scale(0);
+  }
+  15%{
+    transform:rotate(0deg) scale(1);
+  }
+  40%{
+    transform:rotate(0deg) scale(1);
+  }
+  60%{
+    transform:rotate(45deg) scale(1);
+  }
+  85%{
+    transform:rotate(45deg) scale(1);
+  }
+  100%{
+    transform:rotate(45deg) scale(0);
+  }
 }
