@@ -50,7 +50,7 @@ function showMore(){
   else {
     if(!isExpanded) {
       toggleProjects();
-      $('html, body').animate({scrollTop: scrollPos+300},500);
+      $('html, body').animate({scrollTop: scrollPos+100},500);
     }
     else{
       $('html, body').animate({scrollTop: height},500);
@@ -60,7 +60,7 @@ function showMore(){
   }
 
 function toggleProjects() {
-    $('.pr-thumb:not("#pr-main1, #pr-main2, #pr-main3")').toggleClass('show-more');
+    $('.pr-thumb:not("#pr-main1, #pr-main2, #pr-main3, #pr-main4")').toggleClass('show-more');
     $('.pr-more').toggleClass('order-end');
     $('.more, .less').toggleClass('d-none d-inline-block');
     $('.pr-more').toggleClass('col-md-12');
