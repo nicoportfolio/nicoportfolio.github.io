@@ -223,8 +223,13 @@ background-clip: text;
   display:inline-grid;
 }
 
-.pr-more{
+#pr-main5{
   order:-1;
+  display:inline-grid;
+}
+
+.pr-more{
+  order:1;
   margin:30px auto;
   display:inline-grid;
   cursor:pointer;
@@ -577,6 +582,38 @@ background-clip: text;
   padding:0 120px;
   text-align:center;
   margin-bottom:0;
+}
+
+.ww-hover {
+  opacity:1;
+  transition: 400ms ease-out;
+}
+.ww-hover:hover {
+  opacity:0.75;
+  transition: 300ms ease-out;
+}
+
+.ww-extlink{
+  position:absolute;
+  width:50px;
+  height:50px;
+  margin:auto;
+  top:75px;
+  bottom:0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  opacity:0;
+  color:#fff;
+  font-size:21pt;
+  transform:translateY(10px);
+  transition:400ms ease-out;
+}
+
+.ww-hover:hover .ww-extlink{
+  opacity:1;
+  transform:translateY(0px);
+  transition:400ms ease-out;
 }
 
 @media(max-width:960px) {
