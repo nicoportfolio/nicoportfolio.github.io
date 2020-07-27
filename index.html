@@ -8,6 +8,8 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script src="https://kit.fontawesome.com/b1cba542fa.js" crossorigin="anonymous"></script>
+  <script src="/p5/p5.min.js"></script>
+  <script src="/p5/bg.js"></script>
   <link rel="stylesheet" href="/simpleLightbox.min.css">
   <link rel="stylesheet" href="/style.css">
 
@@ -38,22 +40,11 @@
 
 <main id="swup" class="transition-fade">
   <div class="row landing">
-    <div class="col col-12 align-self-center text-center">
+    <div id="p5bg"></div>
       <div class="main-title">
-      <h1 class="text-center txt-mask txt-deco">Hi, I'm Nicolò</h1>
-      <p>an <span>Interaction Designer</span> with a passion for prototyping</p>
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-      	 viewBox="0 0 517.9 517.9" enable-background="new 0 0 517.9 517.9" xml:space="preserve">
-         <g>
-           <path d="M168.1,191l147.5,19.2L170.1,64.7h0c46.9-46.9,122.8-46.9,169.7,0l164.4,164.4C489.4,106.8,385.3,11.9,258.9,11.9h0
-             c-125.6,0-229.2,93.7-244.9,215C58.9,197,113.6,183.9,168.1,191z"/>
-           <path d="M349.8,327.3l-146.2-18.9L348.2,453l0,0c-47.1,47.1-123.4,47.1-170.5,0l-164-164C28.6,411.3,132.7,506,258.9,506h0
-             c125.5,0,229.1-93.6,244.9-214.7C459,321.2,404.3,334.3,349.8,327.3z"/>
-         </g>
-         </svg>
+        <h1 class="text-center">Hi, I'm Nicolò</h1>
+        <p class="text-center">an Interaction Designer with a passion for prototyping</p>
       </div>
-      <ul></ul>
-    </div>
   </div>
   <div class="container main">
     <div class="anchor" id="projects"></div>
@@ -187,6 +178,8 @@
   const swup = new Swup(options);
       init();
       swup.on('contentReplaced', init);
+
+      swup.on('contentReplaced', startp5);
 
       $('#aev').click(function(){
         aev();

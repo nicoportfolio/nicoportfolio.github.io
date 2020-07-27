@@ -13,23 +13,39 @@ $(document).on('click', 'a[href^="#"]', function (event) {
 
 function init(){
 
-  $(document).mousemove(function(event) {
+    $(document).scrollTop(0);
 
-  windowWidth = $(window).width();
-  windowHeight = $(window).height();
-
-  mouseXpercentage = Math.round(event.pageX / windowWidth * 100);
-  mouseYpercentage = Math.round(event.pageY / windowHeight * 100);
-
-  $('.txt-mask').css('background', 'radial-gradient(circle at ' + mouseXpercentage + '% ' + mouseYpercentage
-  + '%, #eee, #2c3e50)');
-  $('.txt-mask').css('background-clip', 'text');
-  $('.txt-mask').css('-webkit-background-clip', 'text');
-  $('.txt-mask').css('-moz-background-clip', 'text');
-  $('.txt-mask').css('-o-background-clip', 'text');
+$("#p5bg").mousedown(function() {
+    $(".main-title").addClass("opacity0");
+}).mouseup(function() {
+    $(".main-title").removeClass("opacity0");
 });
 
-  $(document).scrollTop(0);
+var p5canvas = document.getElementById("p5bg");
+p5canvas.addEventListener('touchstart', function(e) {
+    e.preventDefault();
+    $(".main-title").addClass("opacity0");
+}, false);
+p5canvas.addEventListener('touchend', function(e) {
+    e.preventDefault();
+    $(".main-title").removeClass("opacity0");
+}, false);
+
+//   $(document).mousemove(function(event) {
+//
+//   windowWidth = $(window).width();
+//   windowHeight = $(window).height();
+//
+//   mouseXpercentage = Math.round(event.pageX / windowWidth * 100);
+//   mouseYpercentage = Math.round(event.pageY / windowHeight * 100);
+//
+//   $('.txt-mask').css('background', 'radial-gradient(circle at ' + mouseXpercentage + '% ' + mouseYpercentage
+//   + '%, #eee, #2c3e50)');
+//   $('.txt-mask').css('background-clip', 'text');
+//   $('.txt-mask').css('-webkit-background-clip', 'text');
+//   $('.txt-mask').css('-moz-background-clip', 'text');
+//   $('.txt-mask').css('-o-background-clip', 'text');
+// });
   $('.pr-more').click(showMore);
 }
 
@@ -65,4 +81,8 @@ function toggleProjects() {
     $('.more, .less').toggleClass('d-none d-inline-block');
     $('.pr-more').toggleClass('col-md-12');
   }
+}
+
+function startp5(){
+  let p5cover = new p5();
 }
