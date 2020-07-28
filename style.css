@@ -15,9 +15,15 @@ body{
   background-color:#eee;
 }
 
-.navbar-brand:hover{
-  opacity:0.8;
-  transition:200ms ease-out;
+.navbar-brand img{
+  clip-path:inset(0% 80% 0% 0%);
+  -webkit-clip-path:inset(0% 80% 0% 0%);
+  transition: 300ms ease-out;
+}
+.navbar-brand:hover img{
+  clip-path:inset(0% 0% 0% 0%);
+  -webkit-clip-path:inset(0% 0% 0% 0%);
+  transition: 300ms ease-out;
 }
 
 .nav-item a{
@@ -110,17 +116,6 @@ body{
   top: 0;
   opacity:0;
   animation: revealTitle 500ms 1.9s ease-out forwards;
-}
-
-.txt-mask{
-  background: radial-gradient(ellipse at top, #bdc3c7, transparent),
-              radial-gradient(ellipse at bottom, #2c3e50, transparent);
-background: radial-gradient(circle at top right, #bdc3c7, #2c3e50);
-background-position: 0 50%;
--webkit-background-clip: text;
--moz-background-clip: text;
--o-background-clip: text;
-background-clip: text;
 }
 
 .main{
