@@ -2,8 +2,9 @@ var pointDist = 35;
 var pointd;
 var a=1;
 var i=1;
-var zoomIncrement= 0.05;
-var boxSize=100;
+var zoomIncrement = 1.8;
+var boxSize=180;
+var landing=true;
 
 function setup() {
   var myCanvas = createCanvas(windowWidth, windowHeight, WEBGL);
@@ -37,22 +38,22 @@ function draw() {
   stroke(255);
   strokeWeight(2);
   translate(0,-80,0);
+  if(landing){
+    zoomOut();
+    if(boxSize<=100){
+      landing=false;
+    }
+  }
   if(mouseIsPressed) {
     rotateX(mouseY/-100);
     rotateY(mouseX/-100);
-    zoomIncrement+=0.05;
-    if(boxSize<150){
-      boxSize+=(1/zoomIncrement);
-    }
+    zoomIn();
   }
   else{
     rotateX(frameCount * 0.01-mouseX/-500);
     rotateY(frameCount * 0.01-mouseY/-500);
     rotateZ(frameCount * 0.01-mouseY/-500);
-    zoomIncrement+=0.005;
-    if(boxSize>100){
-      boxSize-=(1/zoomIncrement);
-    }
+    zoomOut();
   }
   box(boxSize);
   pop();
@@ -63,6 +64,21 @@ function mouseReleased() {
 }
 function mousePressed() {
   zoomIncrement= 0.1;
+}
+
+function zoomOut(){
+
+  if(boxSize>100){
+    zoomIncrement+=0.005;
+    boxSize-=(1/zoomIncrement);
+  }
+}
+
+function zoomIn(){
+  if(boxSize<150){
+    zoomIncrement+=0.05;
+    boxSize+=(1/zoomIncrement);
+  }
 }
 
 function windowResized() {
