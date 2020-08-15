@@ -1,3 +1,4 @@
+let myCanvas;
 var pointDist = 35;
 var pointd;
 var a=1;
@@ -7,7 +8,7 @@ var boxSize=180;
 var landing=true;
 
 function setup() {
-  var myCanvas = createCanvas(windowWidth, windowHeight, WEBGL);
+    myCanvas = createCanvas(windowWidth, windowHeight, WEBGL);
     if(document.getElementById("p5bg") == null) {
     remove();
   }

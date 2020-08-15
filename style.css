@@ -110,7 +110,6 @@ body{
   max-width:600px;
   font-size:64pt;
   font-weight: 200;
-  color:#111;
   animation: revealTitle 500ms 1.2s ease-out forwards;
 }
 .landing .main-title p{

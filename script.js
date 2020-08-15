@@ -36,14 +36,16 @@ $("#p5bg").mousedown(function() {
 });
 
 var p5canvas = document.getElementById("p5bg");
-p5canvas.addEventListener('touchstart', function(e) {
-    e.preventDefault();
-    $(".main-title").addClass("opacity0");
-}, false);
-p5canvas.addEventListener('touchend', function(e) {
-    e.preventDefault();
-    $(".main-title").removeClass("opacity0");
-}, false);
+if(p5canvas != null){
+  p5canvas.addEventListener('touchstart', function(e) {
+      e.preventDefault();
+      $(".main-title").addClass("opacity0");
+  }, false);
+  p5canvas.addEventListener('touchend', function(e) {
+      e.preventDefault();
+      $(".main-title").removeClass("opacity0");
+  }, false);
+}
 
   $('.pr-more').click(showMore);
 }
