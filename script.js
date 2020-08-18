@@ -38,7 +38,10 @@ $("#p5bg").mousedown(function() {
 var p5canvas = document.getElementById("p5bg");
 if(p5canvas != null){
   p5canvas.addEventListener('touchstart', function(e) {
-      e.preventDefault();
+      var clientY = e.touches[0].clientY;
+      if(clientY<(height/3)*2){
+        e.preventDefault();
+      }
       $(".main-title").addClass("opacity0");
   }, false);
   p5canvas.addEventListener('touchend', function(e) {
