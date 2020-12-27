@@ -15,7 +15,7 @@ if(bounding.bottom < (window.innerHeight || document.documentElement.clientHeigh
   var img = new Image();
     var clearCanvas;
     var fader;
-  img.src="./assets/brush1r.png";
+  img.src="./WordsWorks/assets/brush1r.png";
   img.width=360;
 
   function distanceBetween(point1,point2) {
