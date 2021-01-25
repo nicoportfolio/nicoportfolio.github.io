@@ -43,7 +43,7 @@
 </nav>
 </div>
 
-<main id="swup" class="transition-fade">
+<main>
   <div class="proj-cover container-fluid" id="top">
     <div class="row">
       <div class="col-12 text-center">
@@ -101,7 +101,7 @@
       </div>
       <div class="row mt-5">
         <div class="col-md-6">
-          <img loading="lazy" src="/Magellan/img/mag_motors.jpg" alt="" class="img-fluid">
+          <img  src="/Magellan/img/mag_motors.jpg" alt="" class="img-fluid">
         </div>
         <div class="col-md-6 align-self-center">
           <p><strong>The two vibration motors on each shoulder strap will indicate your next turn, so you can put your eyes away from your phone while you're on the road.</strong><br> We focused our research on the activity of moving around a city, by walking and by bike, and we got to our conclusion: relying on watching the upcoming directions in a navigation app can be dangerous. That's why we chose to use a vibration feedback to avoid saturating other senses such as sight or hearing, which are crucial to keep awareness of the surroundings.</p>
@@ -112,7 +112,7 @@
             <h1 class="text-center mt-5">User Journey</h1>
             <div class="gallery">
               <div class="col">
-                <a href="/Magellan/img/mag_uj.png" title="User Journey"><img loading="lazy" src="/Magellan/img/mag_uj.png" alt="" class="img-fluid"></a>
+                <a href="/Magellan/img/mag_uj.png" title="User Journey"><img  src="/Magellan/img/mag_uj.png" alt="" class="img-fluid"></a>
               </div>
             </div>
           </div>
@@ -120,7 +120,7 @@
             <h1 class="text-center mt-5">User Flow</h1>
             <div class="gallery">
               <div class="col">
-                <a href="/Magellan/img/mag_uf.png" title="User Flow"><img loading="lazy" src="/Magellan/img/mag_uf.png" alt="" class="img-fluid"></a>
+                <a href="/Magellan/img/mag_uf.png" title="User Flow"><img  src="/Magellan/img/mag_uf.png" alt="" class="img-fluid"></a>
               </div>
           </div>
           </div>
@@ -129,7 +129,7 @@
             <h1 class="text-center mt-5">Process Flow</h1>
             <div class="gallery">
               <div class="col">
-                <a href="/Magellan/img/mag_process.png" title="Process Flow"><img loading="lazy" src="/Magellan/img/mag_process.png" alt="" class="img-fluid"></a>
+                <a href="/Magellan/img/mag_process.png" title="Process Flow"><img  src="/Magellan/img/mag_process.png" alt="" class="img-fluid"></a>
               </div>
             </div>
           </div>
@@ -137,11 +137,11 @@
             <div class="txt mt-5 mb-5">
             <p>After pairing the navigation app to the ESP32, the navigation app will listen for the <i>distance from upcoming maneuver value</i>. If this value goes beyond a set threshold (in this case 25m), the navigation app will register the upcoming maneuvers to the ESP32 BLE characteristic, which will then trigger the vibration signals depending on the bytes sent.</p>
             </div>
-            <img loading="lazy" src="/Magellan/img/mag_code.png" alt="" class="img-fluid">
+            <img  src="/Magellan/img/mag_code.png" alt="" class="img-fluid">
           </div>
           <div class="row my-5">
             <div class="col-md-6">
-              <img loading="lazy" src="/Magellan/img/mag_hardware.png" alt="" class="img-fluid">
+              <img  src="/Magellan/img/mag_hardware.png" alt="" class="img-fluid">
             </div>
             <div class="col-md-6 align-self-center mag-electr">
               <h1>The Electronics</h1>
@@ -158,7 +158,7 @@
               <div class="anchor" id="development"></div>
               <h1 class="text-center mt-5">Development process</h1>
             </div>
-            <img loading="lazy" src="/Magellan/img/mag_dev.png" alt="" class="img-fluid mt-0">
+            <img  src="/Magellan/img/mag_dev.png" alt="" class="img-fluid mt-0">
             <div class="row my-5">
               <div class="col-md-6 text-center">
                 <h1>Problems & Solutions</h1>
@@ -174,22 +174,22 @@
             </div>
             <div class="row my-5 mag-pic">
               <div class="col-md-6 text-center">
-                <img loading="lazy" src="/Magellan/img/mag_ph1.jpg" alt="" class="img-fluid">
+                <img  src="/Magellan/img/mag_ph1.jpg" alt="" class="img-fluid">
               </div>
               <div class="col-md-6 align-self-center">
-                <img loading="lazy" src="/Magellan/img/mag_ph2.jpg" alt="" class="img-fluid">
+                <img  src="/Magellan/img/mag_ph2.jpg" alt="" class="img-fluid">
               </div>
               <div class="col-md-6 align-self-center">
-                <img loading="lazy" src="/Magellan/img/mag_ph3.jpg" alt="" class="img-fluid">
+                <img  src="/Magellan/img/mag_ph3.jpg" alt="" class="img-fluid">
               </div>
               <div class="col-md-6 align-self-center">
-                <img loading="lazy" src="/Magellan/img/mag_ph4.jpg" alt="" class="img-fluid">
+                <img  src="/Magellan/img/mag_ph4.jpg" alt="" class="img-fluid">
               </div>
               <div class="col-md-6 align-self-center">
-                <img loading="lazy" src="/Magellan/img/mag_ph5.jpg" alt="" class="img-fluid">
+                <img  src="/Magellan/img/mag_ph5.jpg" alt="" class="img-fluid">
               </div>
               <div class="col-md-6 align-self-center">
-                <img loading="lazy" src="/Magellan/img/mag_ph6.jpg" alt="" class="img-fluid">
+                <img  src="/Magellan/img/mag_ph6.jpg" alt="" class="img-fluid">
               </div>
             </div>
           </div>
@@ -197,7 +197,12 @@
       </div>
     </div>
 
-  <a href="#top"><div class="arrow-top">
+  <footer>
+    <p class="text-center">&copy; 2020 Nicolò Azzolin</p>
+  </footer>
+</main>
+
+<a href="#top"><div class="arrow-top">
   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
   	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
   <style type="text/css">
@@ -208,29 +213,13 @@
   </svg>
   </div>
   </a>
-  <footer>
-    <p class="text-center">&copy; 2020 Nicolò Azzolin</p>
-  </footer>
-</main>
 
 <script src="/simpleLightbox.min.js" type="text/javascript"></script>
-<script src="/lightboxScript.js" type="text/javascript"></script>
 <script>
-  magellan();
+    $('.lightbox-mag-1 .col a').simpleLightbox();
+  $('.lightbox-mag-2 .col a').simpleLightbox();
+  $('.lightbox-mag-3 .col a').simpleLightbox();
 </script>
 <script src="/script.js" type="text/javascript"></script>
-<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
-<script>
-      const options = {
-    linkSelector:
-      'a[href^="' +
-      window.location.origin +
-      '"]:not([data-no-swup]), a[href^="#"][data-no-swup]'
-  };
-
-  const swup = new Swup(options);
-  init();
-  swup.on('contentReplaced', init);
-</script>
 </body>
 </html>

@@ -87,7 +87,7 @@ function toggleProjects() {
       $("#cir2,#langtip,#codetip,#roletip").css({left: mouseX +'px', top: mouseY +'px'});
     }, 20);
   });
- 
+
   $("#role,#coding,#lang").mouseover(function() {
     $('#cir1').addClass('cursor-select');
   });

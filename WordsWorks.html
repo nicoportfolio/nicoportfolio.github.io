@@ -42,7 +42,7 @@
 </nav>
 </div>
 
-<main id="swup" class="transition-fade">
+<main>
   <div class="proj-cover container-fluid" id="top">
     <div class="row">
       <div class="col-12 text-center">
@@ -113,7 +113,7 @@
         </div>
         <div class="row ww-wire">
           <div class="col-md-6">
-            <img loading="lazy" src="/WordsWorks/img/ww_wireframe.png" alt="" class="img-fluid">
+            <img  src="/WordsWorks/img/ww_wireframe.png" alt="" class="img-fluid">
           </div>
           <div class="col-md-6">
             <ol>
@@ -138,8 +138,11 @@
         </div>
       </div>
     </div>
-
-  <a href="#top"><div class="arrow-top">
+  <footer>
+    <p class="text-center">&copy; 2020 Nicolò Azzolin</p>
+  </footer>
+</main>
+<a href="#top"><div class="arrow-top">
   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
   	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
   <style type="text/css">
@@ -150,30 +153,7 @@
   </svg>
   </div>
   </a>
-  <footer>
-    <p class="text-center">&copy; 2020 Nicolò Azzolin</p>
-  </footer>
-</main>
-
-  <script src="/simpleLightbox.min.js" type="text/javascript"></script>
-  <script src="/lightboxScript.js" type="text/javascript"></script>
   <script src="/script.js" type="text/javascript"></script>
   <script src="/WordsWorks/wwScript.js" type="text/javascript"></script>
-  <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
-  <script>
-        const options = {
-      linkSelector:
-        'a[href^="' +
-        window.location.origin +
-        '"]:not([data-no-swup]), a[href^="#"][data-no-swup]'
-    };
-
-    const swup = new Swup(options);
-    init();
-    swup.on('contentReplaced', init);
-
-    wordsworks();
-    swup.on('contentReplaced', wordsworks);
-  </script>
 </body>
 </html>

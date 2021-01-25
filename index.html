@@ -41,16 +41,28 @@
     </li>
   </ul>
   </div>
-  </nav>
+</nav>
   </div>
 
-<main id="swup" class="transition-fade">
+<main>
   <div class="row landing">
-    <div id="p5bg"></div>
-      <div class="main-title">
-        <h1 class="text-center">Hi, I'm Nicolò</h1>
-        <p class="text-center">an Experience Designer with a passion for prototyping</p>
-      </div>
+    <div class="col-md-8 main-title">
+      <h1 class="text-left">Hi, I'm Nicolò</h1>
+      <p class="text-left">an <span id="role">Experience Designer</span>, a <span id="coding">coding enthusiast</span><br/> and a <span id="lang">language learner</span></p>
+    </div>
+    <div class="cir" id="cir1"></div>
+    <div class="cir" id="cir2"></div>
+    <div id="langtip"><p class="tooltip-txt"><span class="tooltip-title">我正在学习普通话!</span><br/><span class="sub-tip">Currently studying Mandarin Chinese!</span></p></div>
+    <div id="codetip"><p class="tooltip-txt"><span class="tooltip-title">HTML, CSS, Javscript</span><br/><span class="sub-tip">but also some C# and Arduino code</span></p></div>
+    <div id="roletip">
+      <p class="tooltip-txt">
+        <span class="tooltip-title">UI/UX Design Intern</span><br/>
+        <span class="sub-tip">@ Gruppo Trentasei (Milan)</p></span>
+        <span class="tooltip-title">Double Master's degree in Interaction Design</span>
+        <br/><span class="sub-tip">@ Politecnico di Milano & Tongji University (Shanghai)</span>
+      </p>
+    </div>
+  </div>
   </div>
   <div class="container main">
     <div class="anchor" id="projects"></div>
@@ -168,52 +180,6 @@
     <p class="text-center">&copy; 2020 Nicolò Azzolin</p>
   </footer>
 </main>
-  <script src="/p5/p5.min.js"></script>
-  <script src="/p5/bg.js"></script>
-  <script src="/simpleLightbox.min.js" type="text/javascript"></script>
   <script src="/script.js" type="text/javascript"></script>
-  <script src="/LightboxScript.js" type="text/javascript"></script>
-  <script src="/WordsWorks/wwScript.js" type="text/javascript"></script>
-  <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
-  <script>
-  const options = {
-    linkSelector:
-      'a[href^="' +
-      window.location.origin +
-      '"]:not([data-no-swup]), a[href^="/"]:not([data-no-swup]), a[href^="#"][data-no-swup]'
-  };
-
-  const swup = new Swup(options);
-      init();
-      swup.on('contentReplaced', init);
-
-      swup.on('contentReplaced', startp5);
-
-      $('#aev').click(function(){
-        aev();
-        swup.on('contentReplaced', aev);
-      });
-
-      $('#wordsworks').click(function(){
-        wordsworks();
-        swup.on('contentReplaced', wordsworks);
-      });
-
-      $('#ucicinemas').click(function(){
-        uciCinemas();
-        swup.on('contentReplaced', uciCinemas);
-      });
-
-      $('#magellan').click(function(){
-        magellan();
-        swup.on('contentReplaced', magellan);
-      });
-
-      $('#socialDistancing').click(function(){
-        socialDistancing();
-        swup.on('contentReplaced', socialDistancing);
-      });
-
-  </script>
 </body>
 </html>
