@@ -1,8 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web:200,300,400,600");
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   font-family:'Titillium Web', sans-serif;
   font-weight:400;
+  overflow-x:hidden;
+}
+
+main{
+  opacity:0;
+  animation: revealOp 500ms 200ms ease-out forwards; */
 }
 
 .reduce-txt{
@@ -85,23 +94,44 @@ body{
   height:92vh;
 }
 
-#p5bg:hover{
-  cursor:url('/img/cur_hover.png'),auto;
+#cir1 {
+	position: absolute;
+  border: solid 2px #111;
+  pointer-events:none;
+	width: 20px;
+	height: 20px;
+  transform:translate(-50%,-50%);
+  opacity:0;
+  transition: opacity 800ms ease-out;
+}
+#cir2 {
+	position: absolute;
+  background-color:#111;
+  pointer-events:none;
+	width: 8px;
+  height: 8px;
+  opacity:0;
+  transform:translate(-50%,-50%);
+  transition: opacity 300ms ease-out;
 }
 
-#p5bg:active{
-  cursor:url('/img/cur_active.png'),auto;
+.landing{
+  cursor:none;
+}
+
+.landing:hover #cir1{
+  opacity:1;
+}
+
+.landing:hover #cir2{
+  opacity:1;
 }
 
 .landing .main-title{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  pointer-events: none;
+  color:#111;
   user-select:none;
-  max-width:600px;
-  width:100%;
+  margin:auto 0 auto 5rem;
+  padding-bottom:120px;
   transition: 300ms ease-out;
 }
 
@@ -109,13 +139,73 @@ body{
   opacity:0;
   max-width:600px;
   font-size:64pt;
-  font-weight: 200;
-  animation: revealTitle 500ms 1.2s ease-out forwards;
+  font-weight: 800;
+  animation: revealTr 500ms 300ms ease-out forwards;
 }
+
+#role{
+  text-decoration: underline;
+  text-decoration-color: darkorange;
+}
+
+#coding{
+  text-decoration: underline;
+  text-decoration-color:deepskyblue;
+}
+
+#lang{
+  text-decoration: underline;
+  text-decoration-color:mediumseagreen;
+}
+
+.cursor-select{
+  background-color:#111;
+}
+
+#langtip{
+  position: absolute;
+  pointer-events: none;
+  padding:1em 1.8em 0.5em 1.8em;
+  background-color:#fff;
+  box-shadow:0px 8px 21px #00fa7026;
+  display:none;
+  animation: revealOp 250ms ease-out;
+}
+
+#codetip{
+  position: absolute;
+  pointer-events: none;
+  padding:1em 1.8em 0.5em 1.8em;
+  background-color:#fff;
+  box-shadow:0px 8px 21px #00b3fa26;
+  display:none;
+  animation: revealOp 250ms ease-out;
+}
+
+#roletip{
+  position: absolute;
+  pointer-events: none;
+  padding:1em 1.8em 0.5em 1.8em;
+  background-color:#fff;
+  box-shadow:0px 8px 21px #faab0035;
+  display:none;
+  animation: revealOp 250ms ease-out;
+}
+
+.tooltip-title{
+  font-size: 21pt;
+  font-weight: 600;
+}
+.sub-tip{
+  font-size: 14pt;
+  font-weight: 600;
+}
+
 .landing .main-title p{
   opacity:0;
-  font-size:18pt;
-  animation: revealTitle 500ms 1.8s ease-out forwards;
+  font-size:32pt;
+  font-weight: 400;
+  animation: revealTr 500ms 900ms ease-out forwards;
 }
 
 @media (max-width:960px){
@@ -129,32 +219,15 @@ body{
   .landing .col-12 p{
     font-size:16pt;
   }
+  .landing .main-title{
+    margin:25vh 16px;
+  }
   .landing .main-title h1{
-    font-size:42pt;
+    font-size:36pt;
   }
   .landing .main-title p{
-    font-size:16pt;
-    padding:0 30px;
+    font-size:21pt;
   }
-}
-
-.landing .col-12 ul{
-  width:0;
-  padding:0;
-  margin:0 auto;
-}
-.landing .col-12 ul:after {
-  padding:0;
-  content: '';
-  width: 0;
-  height: 100%;
-  height:200px;
-  display:block;
-  position: relative;
-  border: 1px solid #bbb;
-  top: 0;
-  opacity:0;
-  animation: revealTitle 500ms 1.9s ease-out forwards;
 }
 
 .main{
@@ -874,16 +947,6 @@ div.anchor{
     visibility: hidden;
 }
 
-/* SWUP */
-.transition-fade {
-  transition: 0.4s;
-  opacity: 1;
-}
-
-html.is-animating .transition-fade {
-  opacity: 0;
-}
-
 /* SIMPLE LIGHTBOX */
 .slbCaption{
   color:#fff !important;
@@ -897,7 +960,7 @@ html.is-animating .transition-fade {
 
 /* KEYFRAMES */
 
-@keyframes revealTitle{
+@keyframes revealTr{
   0%{
     transform:translateY(20px);
     opacity:0;
@@ -906,4 +969,9 @@ html.is-animating .transition-fade {
     transform:translateY(0px);
     opacity:1;
   }
+}
+
+@keyframes revealOp{
+  0%{opacity:0;}
+  100%{opacity:1;}
 }
