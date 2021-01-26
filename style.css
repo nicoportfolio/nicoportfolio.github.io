@@ -158,6 +158,20 @@ main{
   text-decoration-color:mediumseagreen;
 }
 
+@-moz-document url-prefix() {
+  #role{
+    text-decoration-thickness: 4px;
+  }
+  
+  #coding{
+    text-decoration-thickness: 4px;
+  }
+  
+  #lang{
+    text-decoration-thickness: 4px;
+  }
+}
+
 .cursor-select{
   background-color:#111;
 }
