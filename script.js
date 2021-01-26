@@ -33,22 +33,22 @@ function showMore(){
   if (mq.matches) {
     if(!isExpanded) {
       toggleProjects();
-      $('html, body').animate({scrollTop: scrollPos+300},500);
+      $('html, body').animate({scrollTop: scrollPos+300},0);
     }
     else{
-      $('html, body').animate({scrollTop: height},500);
-      setTimeout(toggleProjects,500)
+      $('html, body').animate({scrollTop: height},0);
+      setTimeout(toggleProjects,300)
     }
     isExpanded=!isExpanded;
   }
   else {
     if(!isExpanded) {
       toggleProjects();
-      $('html, body').animate({scrollTop: scrollPos+100},500);
+      $('html, body').animate({scrollTop: scrollPos+100},0);
     }
     else{
-      $('html, body').animate({scrollTop: height},500);
-      setTimeout(toggleProjects,550);
+      $('html, body').animate({scrollTop: height},0);
+      setTimeout(toggleProjects,300);
     }
     isExpanded=!isExpanded;
   }

@@ -11,7 +11,7 @@ body{
 
 main{
   opacity:0;
-  animation: revealOp 500ms 200ms ease-out forwards; */
+  animation: revealOp 500ms 200ms ease-out forwards;
 }
 
 .reduce-txt{
@@ -300,27 +300,82 @@ main{
   font-size:18pt;
 }
 
-.more svg{
-  transform:rotate(0deg);
-  transition:150ms linear;
+.more{
+  text-decoration:none;
+  color:#111;
 }
-.more:hover svg{
-  transform:rotate(90deg);
-  transition:150ms linear;
+
+.more:hover{
+  text-decoration:none;
+  color:#111;
+}
+
+.more svg g rect{
+  fill: #fff !important;
+  stroke: #111;
+  stroke-width: 10;
+  transform:scale(1);
+  transform-origin: center;
+  transition:300ms ease-out;
+}
+
+.more:hover svg g rect{
+  fill:#111 !important;
+  transform:scale(0.8);
+  transform-origin: center;
+  transition:300ms ease-out;
+}
+
+.more svg g g line{
+  stroke:#111 !important;
+  stroke-width:6;
+  transition:300ms ease-out;
+}
+
+.more:hover svg g g line{
+  stroke:#fff !important;
+  transition:300ms ease-out;
+}
+
+.less svg g rect{
+  fill: #fff !important;
+  stroke: #111;
+  stroke-width: 10;
+  transform:scale(1);
+  transform-origin: center;
+  transition:300ms ease-out;
+}
+
+.less:hover svg g rect{
+  fill:#111 !important;
+  transform:scale(0.8);
+  transform-origin: center;
+  transition:300ms ease-out;
+}
+
+.less svg g g line{
+  stroke:#111 !important;
+  stroke-width:6;
+  transition:300ms ease-out;
+}
+
+.less:hover svg g g line{
+  stroke:#fff !important;
+  transition:300ms ease-out;
 }
 
 .less span{
   font-size:18pt;
 }
 
-.less svg{
-  transform:scaleX(1);
-  transition:200ms linear;
+.less{
+  text-decoration:none;
+  color:#111;
 }
 
-.less:hover svg{
-  transform:scaleX(-1);
-  transition:200ms linear;
+.less:hover{
+  text-decoration:none;
+  color:#111;
 }
 
 #pr-main1{
