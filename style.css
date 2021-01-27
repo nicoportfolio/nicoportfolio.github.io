@@ -145,17 +145,17 @@ main{
 
 #role{
   text-decoration: underline;
-  text-decoration-color: darkorange;
+  text-decoration-color: #ff8c00;
 }
 
 #coding{
   text-decoration: underline;
-  text-decoration-color:deepskyblue;
+  text-decoration-color:#00bfff;
 }
 
 #lang{
   text-decoration: underline;
-  text-decoration-color:mediumseagreen;
+  text-decoration-color: #06D6A0;
 }
 
 @-moz-document url-prefix() {
